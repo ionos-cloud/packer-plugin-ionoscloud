@@ -60,6 +60,6 @@ func parsePrivateKey(pem []byte) (*pem.Block, ssh.PublicKey, error) {
 	pub := signer.PublicKey()
 	typed := key.(crypto.PrivateKey)
 
-	block, err := ssh.MarshalPrivateKey(typed, "")
+	block, err := ssh.MarshalPrivateKey(typed, "") //nolint
 	return block, pub, nil
 }

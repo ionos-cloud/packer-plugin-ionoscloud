@@ -95,7 +95,7 @@ func (s *stepTakeSnapshot) waitTillSnapshotAvailable(id string, ui packersdk.Ui)
 	if err != nil {
 		return err
 	}
-	if available == true {
+	if available {
 		ui.Say("snapshot available")
 		return nil
 	} else {
