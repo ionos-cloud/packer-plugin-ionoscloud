@@ -1,5 +1,5 @@
 main
-packer-plugin-scaffolding
+packer-plugin-ionoscloud
 **/packer_log*.txt
 **/git_*test.pkr.hcl
 crash.log
@@ -7,3 +7,7 @@ crash.log
 dist/*
 .docs/*
 docs.zip
+.idea
+.DS_Store
+.envfile
+.env

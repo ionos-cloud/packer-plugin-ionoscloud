@@ -1,10 +1,15 @@
 // Copyright (c) HashiCorp, Inc.
 // SPDX-License-Identifier: MPL-2.0
 
-package scaffolding
+package ionoscloud
 
-// packersdk.Artifact implementation
+import (
+	"fmt"
+)
+
 type Artifact struct {
+	snapshotData string
+
 	// StateData should store data such as GeneratedData
 	// to be shared with post-processors
 	StateData map[string]interface{}
@@ -19,11 +24,11 @@ func (a *Artifact) Files() []string {
 }
 
 func (*Artifact) Id() string {
-	return ""
+	return "Null"
 }
 
 func (a *Artifact) String() string {
-	return ""
+	return fmt.Sprintf("A snapshot was created: '%v'", a.snapshotData)
 }
 
 func (a *Artifact) State(name string) interface{} {

@@ -1,0 +1,17 @@
+{
+  "builders": [
+    {
+      "communicator": "ssh",
+      "name": "ubuntu",
+      "snapshot_name": "ubuntu-k8s",
+      "image": "Ubuntu-22.04",
+      "location": "de/txl",
+      "disk_size": "5",
+      "ssh_username": "root",
+      "ssh_password": "builder0",
+      "ssh_timeout": "5m",
+      "ssh_private_key_file": "~/.ssh/id_ed25519",
+      "type": "ionoscloud"
+    }
+  ]
+}

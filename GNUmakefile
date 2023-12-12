@@ -1,4 +1,4 @@
-NAME=scaffolding
+NAME=ionoscloud
 BINARY=packer-plugin-${NAME}
 
 COUNT?=1

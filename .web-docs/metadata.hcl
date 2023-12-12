@@ -25,22 +25,7 @@ integration {
   }
   component {
     type = "builder"
-    name = "Component Name (e.g HappyCloud EBS)"
-    slug = "name"
-  }
-  component {
-    type = "provisioner"
-    name = "Component Name (e.g HappyCloud Shell)"
-    slug = "name"
-  }
-  component {
-    type = "post-processor"
-    name = "Component Name"
-    slug = "name"
-  }
-  component {
-    type = "data-source"
-    name = "Component Name"
-    slug = "name"
+    name = "IONOS Cloud"
+    slug = "ionoscloud"
   }
 }

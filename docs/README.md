@@ -14,10 +14,9 @@ To install this plugin, copy and paste this code into your Packer configuration,
 ```hcl
 packer {
   required_plugins {
-    name = {
-      # source represents the GitHub URI to the plugin repository without the `packer-plugin-` prefix.
-      source  = "github.com/organization/name"
-      version = ">=0.0.1"
+    ionoscloud = {
+      version = ">= 1.0.0"
+      source  = "github.com/ionos-cloud/ionoscloud"
     }
   }
 }
@@ -26,7 +25,7 @@ packer {
 Alternatively, you can use `packer plugins install` to manage installation of this plugin.
 
 ```sh
-$ packer plugins install github.com/organization/plugin-name
+$ packer plugins install github.com/ionos-cloud/ionoscloud
 ```
 
 ### Components
@@ -35,21 +34,5 @@ The Scaffolding plugin is intended as a starting point for creating Packer plugi
 
 #### Builders
 
-- [builder](/packer/integrations/hashicorp/scaffolding/latest/components/builder/builder-name) - The scaffolding builder is used to create endless Packer
-  plugins using a consistent plugin structure.
-
-#### Provisioners
-
-- [provisioner](/packer/integrations/hashicorp/scaffolding/latest/components/provisioner/provisioner-name) - The scaffolding provisioner is used to provisioner
-  Packer builds.
-
-#### Post-processors
-
-- [post-processor](/packer/integrations/hashicorp/scaffolding/latest/components/post-processor/postprocessor-name) - The scaffolding post-processor is used to
-  export scaffolding builds.
-
-#### Data Sources
-
-- [data source](/packer/integrations/hashicorp/scaffolding/latest/components/datasource/datasource-name) - The scaffolding data source is used to
-  export scaffolding data.
-
+- [ionoscloud](/packer/integrations/hashicorp/ionoscloud/latest/components/builder/ionoscloud) - The IONOSCloud Builder
+  is able to create virtual machines for [IONOS Compute Engine](https://cloud.ionos.com/compute).
